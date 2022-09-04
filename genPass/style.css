@@ -1,0 +1,175 @@
+ul, li {
+	list-style: none;
+}
+
+.vg-passwords {
+	font-family: 'Shadows Into Light', cursive;
+	padding: 100px 0;
+}
+
+h4 {
+	font-size: 60px;
+	color: black;
+}
+
+.vg-passwords-wrapper {
+	position: relative;
+	display: flex;
+}
+
+.vg-passwords-item {
+	margin-right: 50px;
+	position: relative;
+	height: 100%;
+	width: 30%;
+}
+
+.vg-passwords-item:last-child {
+	margin-right: 0;
+}
+
+.vg-passwords-item label {
+	font-size: 24px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) scale(1);
+	left: 30px;
+	padding: 0 10px;
+	z-index: -1;
+	transition: all .4s ease-in-out;
+}
+
+.vg-passwords-item span:before {
+	content: '';
+	width: 0;
+	height: 2px;
+	background-color: white;
+	position: absolute;
+	top: -14px;
+	left: 0;
+	transition: all .3s ease-in-out;
+	z-index: -1;
+}
+
+.vg-passwords-item input {
+	padding: 18px 30px;
+	background-color: transparent;
+	width: 100%;
+}
+
+.vg-passwords-item input::placeholder {
+	color: transparent;
+}
+
+.vg-passwords-item input:focus ~ label, label:active {
+	top: -18px;
+	left: 23px;
+	z-index: 1;
+	transform: translateY(0) scale(.7);
+	transform-origin: left;
+	transition: all .3s ease-in-out;
+}
+
+.vg-passwords-item input:focus ~ label > span:before {
+	width: 100%;
+	height: 3px;
+	transition: all .3s ease-in-out;
+	top: 18px;
+	background-color: white;
+	transition-duration: .35s;
+}
+
+.vg-passwords-item input:not(:placeholder-shown) ~ label {
+	top: -18px;
+	left: 23px;
+	z-index: 1;
+	transform: translateY(0) scale(.7);
+	transform-origin: left;
+	transition: all .3s ease-in-out;
+}
+
+.vg-passwords-item input:not(:placeholder-shown)  ~ label > span:before {
+	width: 100%;
+	height: 3px;
+	transition: all .4s ease-in-out;
+	top: 18px;
+	background-color: white;
+	transition-duration: .5s;
+}
+
+.btn {
+	font-family: 'Shadows Into Light', cursive;
+	padding: 10px 40px;
+	font-size: 18px;
+	background-color: transparent;
+	color: black;
+	border: 1px solid black;
+}
+
+.btn:hover {
+	background-color: rgba(0,0,0, .3);
+	border: 1px solid black;
+}
+
+/*======GENERATE======*/
+
+.vg-generate .result {
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: red;
+}
+
+/*============*/
+
+.text-block {
+	position: absolute;
+	top: -42px;
+	left: 150px;
+	background-color: white;
+	box-shadow: 0 0 3px -2px black;
+	opacity: 0;
+	transition: all .4s ease-in-out;
+	padding: 3px 17px;
+	width: 100%;
+}
+
+.active {
+	transition: all .4s ease-in-out;
+	opacity: 1;
+
+}
+
+.color-block {
+	width: 0;
+	height: 3px;
+	margin-top: 25px;
+	transition: all .4s ease-in-out;
+}
+
+.bad {
+	width: 83.3333333333px;
+	background-color: red;
+	transition: all .4s ease-in-out;
+	margin-bottom: 20px;
+}
+
+.normal {
+	width: 166.6666666666px;
+	background-color: blue;
+	transition: all .4s ease-in-out;
+	margin-bottom: 20px;
+}
+
+.good {
+	width: 251px;
+	background-color: green;
+	transition: all .4s ease-in-out;
+	margin-bottom: 20px;
+}
+
+.genPassResult.result {
+	font-size: 20px;
+	color: black;
+	font-weight: 700;
+}
+
